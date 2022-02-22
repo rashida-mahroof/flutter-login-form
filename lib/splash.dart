@@ -26,6 +26,7 @@ class _SplashState extends State<Splash> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.red[600],
       body:
        Center(child: Image.network('https://media-exp1.licdn.com/dms/image/C560BAQF43WOeqGiCrA/company-logo_200_200/0/1607696679447?e=2159024400&v=beta&t=LpZqdS18oLMoZpc1TWFpRVtBkLVsDdCtF7oQlagYZ_M'),
       ),
@@ -38,7 +39,7 @@ class _SplashState extends State<Splash> {
   }
   Future<void> gotoLogin() async{
     await Future.delayed(Duration(seconds: 3));
-    Navigator.of(context).push(MaterialPageRoute(builder: (ctx){
+    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (ctx){
       return ScreenLogin();
         }
       ),
